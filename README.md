@@ -35,18 +35,19 @@ Setting up a virtual environment is a best practice to manage dependencies:
 1. Create a virtual environment:
    ```bash
    # For Windows
-   python -m venv venv
-   venv\Scripts\activate
+   py -3 -m venv {anyfoldername} 
+   . {anyfoldername}/Scripts/activate 
 
    # For macOS/Linux
-   python3 -m venv venv
-   source venv/bin/activate
+   python3 -m venv  {anyfoldername} 
+   . {anyfoldername}/Scripts/activate 
    ```
 
 ### Step 3: Install Flask and Requests
 Install the required packages (Flask and Requests) using pip:
 ```bash
-pip install Flask requests
+pip install Flask
+pip install requests
 ```
 
 ### Step 4: Run the Application
