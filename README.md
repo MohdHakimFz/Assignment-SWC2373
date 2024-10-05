@@ -1,6 +1,3 @@
-Here’s a detailed step-by-step README for your GitHub project, designed to guide users through the process of setting up and using your Webex application. This README is formatted for clarity and comprehensiveness.
-
-```markdown
 # Webex Application
 
 ## Description
