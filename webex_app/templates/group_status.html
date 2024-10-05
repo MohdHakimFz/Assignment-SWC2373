@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Group Members Status</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <style>
+        /* Status color classes */
+        .status-active {
+            background-color: #d4edda; /* Light green */
+            color: #155724; /* Dark green text */
+        }
+
+        .status-inactive {
+            background-color: #f8f9fa; /* Light gray */
+            color: #6c757d; /* Dark gray text */
+        }
+
+        .status-dnd {
+            background-color: #f8d7da; /* Light red */
+            color: #721c24; /* Dark red text */
+        }
+
+        .status-unknown {
+            background-color: #fff3cd; /* Light yellow */
+            color: #856404; /* Dark yellow text */
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <h2>Group Members Status</h2>
+        <ul class="list-group">
+            {% for member in members_status %}
+            <li class="list-group-item 
+                {% if member.status == 'active' %}
+                    status-active
+                {% elif member.status == 'inactive' %}
+                    status-inactive
+                {% elif member.status == 'dnd' %}
+                    status-dnd
+                {% else %}
+                    status-unknown
+                {% endif %}
+            ">
+                <strong>{{ member.displayName }}</strong> - Status: {{ member.status | capitalize }}
+            </li>
+            {% endfor %}
+        </ul>
+
+        <!-- Back to Menu Button -->
+        <a href="{{ url_for('menu', access_token=access_token) }}" class="btn btn-secondary mt-3">Back to Menu</a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,254 @@
+/* Background Image for the entire page */
+body {
+    background-image: url("/static/images/background.jpg"); /* Adjust the path to your image */
+    background-size: cover; /* Ensure the image covers the entire background */
+    background-position: center center; /* Center the background image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-attachment: fixed; /* Make the background image stay in place */
+    font-family: 'Poppins', sans-serif; /* Modern font */
+    margin: 0;
+    padding: 0;
+}
+
+/* Container styling with a glass effect */
+.container {
+    background-color: rgba(255, 255, 255, 0.6); /* White background with more transparency for glass effect */
+    backdrop-filter: blur(10px); /* Glassmorphism blur effect */
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Add a deeper shadow for a modern look */
+    max-width: 700px;
+    margin: 100px auto;
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Modern Heading styling */
+h2 {
+    margin-bottom: 20px;
+    font-size: 2.5rem;
+    color: #333;
+    font-weight: 600;
+    text-align: center;
+    letter-spacing: 1.2px;
+    animation: slideInDown 0.7s ease-out;
+}
+
+/* Form layout with modern design */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Modern Label styles */
+label {
+    font-size: 1rem;
+    margin-bottom: 8px;
+    color: #333;
+    font-weight: 500;
+}
+
+/* Input field styles with more modern look */
+input {
+    padding: 14px;
+    margin-bottom: 20px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    font-size: 1rem;
+    background-color: rgba(255, 255, 255, 0.6); /* Slight transparency */
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.05);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Input focus effect with more vibrancy */
+input:focus {
+    border-color: #3498db; /* Modern blue color */
+    box-shadow: 0 0 10px rgba(52, 152, 219, 0.5);
+    outline: none;
+}
+
+/* Modern button styles */
+button {
+    padding: 12px;
+    background: linear-gradient(45deg, #3498db, #9b59b6); /* Gradient for a modern button */
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+/* Button hover effect with a bolder animation */
+button:hover {
+    background: linear-gradient(45deg, #2980b9, #8e44ad);
+    transform: translateY(-3px) scale(1.05);
+}
+
+/* Button active state */
+button:active {
+    transform: scale(0.98);
+}
+
+/* List styling for modern links */
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+/* List item styles with subtle hover effect */
+li {
+    padding: 15px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    text-align: left;
+    font-size: 1.1rem;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    background-color: rgba(255, 255, 255, 0.6); /* Glass effect */
+    margin-bottom: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05); /* Subtle shadow */
+}
+
+/* List item hover effect */
+li:hover {
+    background-color: rgba(52, 152, 219, 0.1);
+    transform: translateY(-3px);
+}
+
+/* Link styles with modern feel */
+a {
+    text-decoration: none;
+    font-size: 1.1rem;
+    color: #3498db;
+    font-weight: 500;
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+
+/* Link hover effect */
+a:hover {
+    color: #2980b9;
+    transform: scale(1.05);
+}
+
+/* Animations for smooth transition effects */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes slideInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* Prevent the label from breaking */
+p strong {
+    display: inline-block;
+    width: 150px; /* Adjust this width to fit your layout */
+    vertical-align: top;
+    white-space: wrap; /* Prevent label from wrapping */
+}
+
+p {
+    word-wrap: break-word; /* Ensure long text wraps inside the container */
+    overflow-wrap: break-word; /* Break long words if needed */
+    margin-bottom: 10px;
+}
+
+p span, p {
+    max-width: 100%; /* Ensure it doesn't exceed the container's width */
+    display: inline-block;
+    white-space: normal; /* Allows wrapping of the content */
+}
+
+
+/* For the Back To Menu button positioned at the bottom-left */
+.back-to-menu-btn {
+    position: absolute;
+    bottom: 4px;
+    left: 38px; /* Positioning the button at the left-bottom of the container */
+    padding: 10px 20px;
+    background-color: #4a5568;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Button hover effect */
+.back-to-menu-btn:hover {
+    background-color: #2d3748; /* Darker shade on hover */
+    transform: translateY(-3px);
+}
+
+/* Button active state */
+.back-to-menu-btn:active {
+    transform: scale(0.98);
+}
+
+/* Styling for the room list container */
+.room-list-container {
+    background-color: rgba(255, 255, 255, 0.8); /* Slightly opaque white background */
+    backdrop-filter: blur(10px); /* Glass effect */
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2); /* Adding shadow for depth */
+    max-width: 800px; /* Adjust max-width as needed */
+    margin: auto; /* Center the container */
+}
+
+/* Table styling */
+.table {
+    margin-top: 20px; /* Space between title and table */
+    border-collapse: collapse; /* Collapse borders for a cleaner look */
+    width: 100%; /* Ensure the table takes full width */
+}
+
+/* Table styling */
+.table {
+    margin-top: 20px; /* Space between title and table */
+    border-collapse: collapse; /* Collapse borders for a cleaner look */
+    width: 100%; /* Ensure the table takes full width */
+}
+
+/* Table header styling */
+.table thead th {
+    background-color: #6c757d; /* Bootstrap gray for the header */
+    color: white; /* White text for header */
+    text-align: left; /* Align header text to the left */
+}
+
+/* Control column widths */
+.table td, .table th {
+    max-width: 200px; /* Set a maximum width */
+    overflow-wrap: break-word; /* Allow long text to break */
+    word-wrap: break-word; /* For older browsers */
+    white-space: normal; /* Allow text to wrap to the next line */
+    padding: 8px; /* Padding inside cells */
+}
+
+/* Optional: Styling for table cells */
+.table td {
+    padding: 10px; /* Space inside cells */
+    vertical-align: top; /* Align text to the top */
+}
+
+/* Optional: Adjustments for the Back to Menu button */
+.btn {
+    margin-top: -10px; /* Space above the button */
+}

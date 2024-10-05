@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Room Created</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='styles.css') }}"
+    />
+  </head>
+  <body>
+    <div class="container mt-5">
+      <div class="alert alert-success" role="alert">
+        Room <strong>{{ room_title }}</strong> created successfully with members!
+      </div>
+      <!-- Back to Menu Button -->
+      <a href="{{ url_for('menu', access_token=access_token) }}" class="btn btn-secondary mt-3">Back to Menu</a>
+    </div>
+  </body>
+</html>
